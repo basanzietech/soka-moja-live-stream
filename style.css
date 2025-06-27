@@ -1,0 +1,576 @@
+/* Modern Professional Styles for Mpingo TV */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --secondary-text-color: #666;
+    --bg: #f7f7fa;
+    --header-bg: #fff;
+    --header-text: #23272a;
+    --footer-bg: #23272a;
+    --footer-text: #fff;
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --accent: #0a7cff;
+    --accent-hover: #005bb5;
+    --shadow: 0 2px 12px rgba(10, 124, 255, 0.08);
+    --radius: 1.2rem;
+    --transition: 0.2s cubic-bezier(.4,0,.2,1);
+    --focus: 0 0 0 2px var(--accent);
+}
+
+html.dark {
+    --background-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --border-color: #333;
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --secondary-text-color: #aaa;
+    --bg: #181a1b;
+    --header-bg: #23272a;
+    --header-text: #f7f7fa;
+    --footer-bg: #23272a;
+    --footer-text: #f7f7fa;
+    --card-bg: #23272a;
+    --card-border: #333;
+    --accent: #0a7cff;
+    --accent-hover: #66aaff;
+    --shadow: 0 2px 12px rgba(10,124,255,0.18);
+    --focus: 0 0 0 2px var(--accent);
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+html.dark body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Light Mode */
+html:not(.dark) body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.5rem 0 1rem 0;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+html:not(.dark) header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    color: var(--header-text);
+    margin: 0 0 0 2rem;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.logo {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.theme-toggle {
+    margin-right: 2rem;
+    background: var(--card-bg);
+    border: 1.5px solid var(--card-border);
+    border-radius: 2rem;
+    padding: 0.45rem 1.3rem;
+    font-size: 1.1rem;
+    color: var(--accent);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), border var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.theme-toggle:focus {
+    box-shadow: var(--focus);
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent-hover);
+}
+
+.theme-toggle .material-symbols-outlined {
+    font-size: 1.5rem;
+    transition: color var(--transition);
+}
+
+.theme-toggle .icon-light {
+    color: #fbc02d;
+}
+
+.theme-toggle .icon-dark {
+    color: #90caf9;
+}
+
+.theme-toggle .theme-label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 0.2rem;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 2rem auto 2rem auto;
+    width: 95%;
+}
+
+.error-message, .no-matches {
+    color: #ff5555;
+    text-align: center;
+    padding: 2rem;
+}
+
+.no-matches {
+    color: inherit;
+}
+
+/* Match Card Styles */
+.match-card {
+    background: var(--card-bg);
+    border: 1.5px solid var(--card-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.7rem;
+    padding: 1.3rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: box-shadow var(--transition), border var(--transition), transform var(--transition);
+    position: relative;
+}
+
+html.dark .match-card {
+    background-color: #1e1e1e;
+}
+
+html:not(.dark) .match-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.match-card:hover {
+    box-shadow: 0 6px 24px rgba(10,124,255,0.13);
+    border-color: var(--accent);
+    transform: translateY(-2px) scale(1.01);
+}
+
+.match-details {
+    font-size: 1.13rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.2px;
+}
+
+.match-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid var(--card-border);
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.team-name {
+    font-size: 1.13rem;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.match-info {
+    text-align: center;
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.match-score {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.match-status {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 0.1rem;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-bottom: 0.1rem;
+}
+
+.match-status.live {
+    color: #e53935;
+    font-weight: 800;
+}
+
+.match-status.finished {
+    color: #43a047;
+}
+
+.live-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #e53935;
+    border-radius: 50%;
+    margin-right: 0.3em;
+    vertical-align: middle;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #e5393555; }
+    70% { box-shadow: 0 0 0 8px #e5393500; }
+    100% { box-shadow: 0 0 0 0 #e5393500; }
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1.3rem 0 1.3rem 0;
+    font-size: 1.13rem;
+    border-top: 1.5px solid var(--card-border);
+    margin-top: 2rem;
+    letter-spacing: 0.1px;
+}
+
+html.dark footer {
+    border-top: 1px solid #333;
+}
+
+html:not(.dark) footer {
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: var(--accent);
+    margin: 0 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition);
+    letter-spacing: 0.1px;
+}
+
+footer a:hover, footer a:focus {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+footer a:focus {
+    outline: none;
+    box-shadow: var(--focus);
+}
+
+/* --- Modal Styles --- */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 450px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.4s ease-out;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 24px;
+    line-height: 1.6;
+}
+
+.modal-body p {
+    margin: 0 0 1rem;
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border-color);
+}
+
+.modal-ok-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.modal-ok-btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.legal-page {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    margin: 2rem auto 2rem auto;
+    max-width: 800px;
+    color: var(--text);
+}
+
+.legal-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.legal-page h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+}
+
+.legal-page h3 {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.legal-page ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.legal-page p, .legal-page li {
+    font-size: 1.07rem;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main, .legal-page {
+        padding: 1rem !important;
+        margin: 1rem auto 1rem auto !important;
+    }
+    header h1 {
+        font-size: 1.3rem;
+        margin-left: 1rem;
+    }
+    .theme-toggle {
+        margin-right: 1rem;
+        padding: 0.3rem 0.7rem;
+        font-size: 1rem;
+    }
+    .match-card {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Modern Dialog Styles */
+.modern-dialog-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 34, 40, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.modern-dialog {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(10, 124, 255, 0.13), 0 1.5px 8px rgba(0,0,0,0.10);
+  padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: dialogIn 0.18s cubic-bezier(.4,0,.2,1);
+}
+@keyframes dialogIn {
+  from { transform: scale(0.95) translateY(30px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.dialog-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog-close:hover, .dialog-close:focus {
+  color: var(--accent-hover);
+  background: rgba(10,124,255,0.08);
+  outline: none;
+}
+.dialog-content h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.dialog-content p {
+  font-size: 1.08rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.dialog-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.dialog-ok {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 2.2rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(10,124,255,0.08);
+  transition: background 0.18s, color 0.18s;
+  outline: none;
+}
+.dialog-ok:hover, .dialog-ok:focus {
+  background: var(--accent-hover);
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .modern-dialog {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    min-width: 0;
+  }
+} 
