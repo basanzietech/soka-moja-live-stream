@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Mpingo TV</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Terms of Service - Mpingo TV | Football Match Platform Terms</title>
+    <meta name="description" content="Read Mpingo TV's terms of service to understand the rules and conditions for using our football match platform and services." />
+    <meta name="keywords" content="terms of service, Mpingo TV, football matches, platform terms, user agreement, service conditions" />
+    <meta name="author" content="Mpingo TV" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Terms of Service - Mpingo TV" />
+    <meta property="og:description" content="Read Mpingo TV's terms of service to understand the rules and conditions for using our football match platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mpingotv.com/terms.php" />
+    <meta property="og:image" content="https://mpingotv.com/favicon.svg" />
+    <meta property="og:site_name" content="Mpingo TV" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Terms of Service - Mpingo TV" />
+    <meta name="twitter:description" content="Read Mpingo TV's terms of service to understand the rules and conditions for using our football match platform." />
+    <meta name="twitter:image" content="https://mpingotv.com/favicon.svg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mpingotv.com/terms.php" />
+    
+    <!-- Favicon -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    
+    <!-- Fonts and Styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service - Mpingo TV",
+        "description": "Terms of service for Mpingo TV football match platform",
+        "url": "https://mpingotv.com/terms.php",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Mpingo TV",
+            "url": "https://mpingotv.com"
+        }
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -17,6 +67,20 @@
             <span class="theme-label">Theme</span>
         </button>
     </header>
+    
+    <!-- AdSense Banner Ad -->
+    <div class="adsense-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+             data-ad-slot="YOUR_BANNER_AD_SLOT"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
     <main class="legal-page">
         <h1>Terms of Service for Mpingo TV</h1>
         <p><em>Last Updated: June 24, 2024</em></p>
@@ -24,6 +88,20 @@
         <p>By accessing or using our website, Mpingo TV (the "Site"), you agree to be bound by these Terms of Service and our Privacy Policy. These Terms apply to all visitors, users, and others who access or use the Service. If you disagree with any part of the terms, then you may not access the Service. Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.</p>
         <h2>2. DESCRIPTION OF SERVICE</h2>
         <p>Mpingo TV is a web-based platform that provides users with access to football match schedules, scores, and related data ("Content"). The Content is aggregated from third-party sources, primarily the Sofascore API. The Service is provided for personal, non-commercial use only. We reserve the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice.</p>
+        
+        <!-- AdSense In-Article Ad -->
+        <div class="adsense-inarticle">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                 data-ad-slot="YOUR_INARTICLE_AD_SLOT"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
         <h2>3. USE OF THE SERVICE</h2>
         <p>You agree to use the Service only for purposes that are permitted by these Terms and any applicable law, regulation, or generally accepted practices or guidelines in the relevant jurisdictions. You agree not to engage in any activity that interferes with or disrupts the Service (or the servers and networks which are connected to the Service).</p>
         <h3>User Conduct</h3>
@@ -66,10 +144,25 @@
         <h2>10. CONTACT US</h2>
         <p>If you have any questions about these Terms, please contact us at: <a href="mailto:afrohitsmedia@gmail.com">afrohitsmedia@gmail.com</a></p>
     </main>
+    
+    <!-- AdSense Footer Ad -->
+    <div class="adsense-footer">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+             data-ad-slot="YOUR_FOOTER_AD_SLOT"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
     <footer>
         <a href="privacy.php">Privacy Policy</a>
         <a href="terms.php">Terms of Service</a>
     </footer>
+    
     <script>
     // Theme switcher logic
     function applyTheme(theme) {
@@ -83,14 +176,34 @@
       localStorage.setItem('theme', theme);
       applyTheme(theme);
     }
+    
+    // Enhanced animations
+    function addScrollAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('h2, h3, p, ul').forEach(element => {
+            observer.observe(element);
+        });
+    }
+    
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggle = document.getElementById('theme-toggle');
       const savedTheme = localStorage.getItem('theme') || 'dark';
       applyTheme(savedTheme);
+      
       themeToggle.addEventListener('click', function() {
         const isDark = document.documentElement.classList.contains('dark');
         setTheme(isDark ? 'light' : 'dark');
       });
+      
+      // Initialize scroll animations
+      addScrollAnimations();
     });
     </script>
 </body>

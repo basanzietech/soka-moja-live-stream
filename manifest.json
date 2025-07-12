@@ -1,0 +1,21 @@
+{
+    "name": "Mpingo TV - Live Football Matches",
+    "short_name": "Mpingo TV",
+    "description": "Watch live football matches, get real-time scores, and stay updated with match schedules",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1e1e1e",
+    "theme_color": "#0a7cff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["sports", "entertainment"],
+    "lang": "en",
+    "dir": "ltr"
+} 
